@@ -6,8 +6,8 @@ class App:
     LEVEL_REQUEST_URL = ' https://raw.githubusercontent.com/StonyTV/dofus-temporis-v-cards/main/levelup.json'
 
     def __init__(self) -> None:
-        start_level = int(input('entrer le level de depart :\n>>> '))
-        end_level = int(input('entrer le level d\'arriver :\n>>> '))
+        start_level = int(input('Entrer le level de départ :\n>>> '))
+        end_level = int(input('Entrer le level cible :\n>>> '))
         self.cardsManager = CardsManager.load()
         self.levelRange = range(start_level, end_level + 1)
         self.card_id_needed = self.get_card_id_needed()
@@ -54,15 +54,15 @@ class App:
         return items_required
 
     def run(self) -> None:
-        print('--------------carte demander pour up--------------')
-        for card in self.card_needed:
+        print('-------------------Carte(s) à drop-------------------')
+        for card in self.card_dropable_needed:
+                print(card.name)     
+
+        print('----------------Carte(s) à craft----------------')
+        for card in self.card_craftable_needed:
             print(card.name)
 
-        print('-------------------carte a drop-------------------')
-        for card in self.card_dropable_needed:
-                print(card.name)
-
-        print('---------------ingredient requis-----------------')
+        print('---------------Ingrédient requis-----------------')
         for name, quantity in self.get_items_required().items():
             print(f'{name} : x{quantity}')
 

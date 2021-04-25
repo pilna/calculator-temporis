@@ -11,12 +11,16 @@ Application permettant d'obtenir le nombre d'ingrédient requis pour passer un c
 prérequis : 
 - python 3.x
 - acces internet 
+- lib requests
+
+si requests n'est pas installer
+> python3 -m pip install requests
 
 1ère étape :
 > git clone https://github.com/pilna/calculator-temporis.git
 
 2nd étape :
-> cd calculator-dofus
+> cd calculator-temporis
 
 3ème étape :
 > python3 src/main.py
