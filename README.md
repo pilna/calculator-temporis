@@ -13,7 +13,7 @@ prérequis :
 - acces internet 
 
 1ère étape :
-> git clone TODO
+> git clone https://github.com/pilna/calculator-temporis.git
 
 2nd étape :
 > cd calculator-dofus
